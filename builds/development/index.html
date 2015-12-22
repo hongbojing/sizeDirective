@@ -1,13 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>day #</title>
-  <link rel="stylesheet" href="css/myStyle.css">
-  <link rel="stylesheet" href="css/anotherstyle.css">
+    <meta charset="UTF-8">
+    <title>day #</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <link rel="stylesheet" href="css/anotherstyle.css">
 </head>
-<body>
+<body ng-app="myApp">
 
+<div ng-controller="myController as myCtrl">
+    <p>{{myCtrl.test}}</p>
+</div>
+
+<div resize>
+    <p ng-if="isDesktop">this is desktop at {{windowWidth}}</p>
+    <p ng-if="isTablet">this is tablet at {{windowWidth}}</p>
+    <p ng-if="isMobile">this is mobile at {{windowWidth}}</p>
+</div>
+
+<script src="js/lib/angular/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/my-controller.js"></script>
+<script src="js/directives/resize-directive.js"></script>
 <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
 </body>
 </html>
